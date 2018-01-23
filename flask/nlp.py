@@ -37,8 +37,8 @@ class Rec():
 		self.keywords = dict()
 		with open("techDict.txt") as f:
 			content = f.readlines()
-		for c in content:
-			self.keywords[c.lower().strip()] = 1
+			for c in content:
+				self.keywords[c.lower().strip()] = 1
 
 		texts = [[word for word in docment if word in self.keywords] for docment in texts_tokenized]
 
